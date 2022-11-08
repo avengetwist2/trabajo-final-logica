@@ -31,11 +31,13 @@ class Persona:
 
 
 
-
+"""
 tomarNombre = Persona("brayan","brayan@gmail.com","3124567", "admin", "123")
 print(tomarNombre.getNombre())
 tomarNombre.setNombre('juan')
 print(tomarNombre.getNombre())
+
+"""
 
 
 
