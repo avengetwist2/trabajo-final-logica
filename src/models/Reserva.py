@@ -1,11 +1,19 @@
-class Reserva():
-    def _init_(self, horario, sala, asiento):
-        self.horario = horario
-        self.sala = sala
-        self.asiento = asiento
+class Reserva:
+    def __init__(self, sala, asiento,horario, persona):
+        self.__horario = horario
+        self.__sala = sala
+        self.__asiento = asiento
+        self.__persona = persona
 
-    def _str_(self):
-        return (self.horario, self.sala, self.asiento)
-        horario(self.horario)
-        sala(self.sala)
-        asiento(self.asiento)
+    def getHorario(self):
+        return self.__horario
+    def getSala(self):
+        return self.__sala
+    def getAsiento(self):
+        return self.__asiento
+
+    def getPersona(self):
+        return self.__persona
+
+
+
