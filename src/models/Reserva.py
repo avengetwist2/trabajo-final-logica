@@ -16,4 +16,3 @@ class Reserva:
         return self.__persona
 
 
-

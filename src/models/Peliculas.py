@@ -1,4 +1,5 @@
 class Pelicula:
+
     def __init__(self,duracion, nombre, actor, genero, idioma):
         self.__duracion = duracion
         self.__nombre = nombre

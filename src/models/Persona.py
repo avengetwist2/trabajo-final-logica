@@ -8,6 +8,7 @@ class Persona:
         self.__rol=rol
         self.__password=password
 
+
     # aqui van los metodos de acceso a los atributos
     def getNombre(self):
         return self.__nombre
@@ -19,10 +20,6 @@ class Persona:
         return self.__rol
     def getPassword(self):
         return self.__password
-
-
-
-
 
 
 
