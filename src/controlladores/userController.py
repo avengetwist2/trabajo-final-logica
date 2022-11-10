@@ -11,7 +11,7 @@ class Account:
             usuario = conn.run_query(query)
 
             if usuario != None:
-                if usuario.fetchall()[0][5] == self.Obj_usuario.getPassword():
+                if usuario.fetchall()[0][4] == self.Obj_usuario.getPassword():
                     return [True , self.Obj_usuario]
                 else:
                     return False
@@ -60,7 +60,7 @@ class User():
 usuario = User()
 
 cuenta = Account(usuario)
-retorno = cuenta.register()
+retorno = cuenta.login()
 print(retorno)
 
 
