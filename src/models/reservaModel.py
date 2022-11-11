@@ -2,7 +2,7 @@
 #from src.controlladores.reservasController import ReservasController
 
 class ReservaModel:
-    def __init__(self, horario, sala, asiento=None):
+    def __init__(self, horario, sala, asiento=None, persona=None):
         self.__horario__ = horario
         self.__sala__ = sala
         self.__asiento__ = asiento
