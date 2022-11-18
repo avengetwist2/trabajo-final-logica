@@ -2,3 +2,6 @@
 prueba.ui
 widget.py
 widget.ui
+build
+dist
+main.spec

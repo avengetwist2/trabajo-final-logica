@@ -1,21 +1,22 @@
 import sys
 import os
-from sys import path
-path.append("../../")
 from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox, QDialog, QWidget
 from PyQt5 import uic
 from PyQt5.QtCore import Qt, QPoint, QFile, QIODevice
 # para que funcione la importacion src.....
-
+from sys import path
+path.append("../../")
 # CLASES CREADAS PARA EL USO DE MVC
-from src.models.Persona import Persona
-from src.controlladores.userController import Account
+from models.Persona import Persona
+from controlladores.userController import Account
 
 #INTERFACES
-from src.views.intefaz_admin import  SeccionAdministrador
-from src.views.interfaz_usuario import SeccionUsuario
+from views.intefaz_admin import  SeccionAdministrador
+from views.interfaz_usuario import SeccionUsuario
 
-
+# PAQUETE DE ESTILOS EN EL ARCHIVO QRC
+import views.ui.resource_rc
+import views.ui.resource
 
 
 
@@ -33,11 +34,8 @@ class Principal(QMainWindow):
         f.close()
 
         # botones
-        # nombre boton iniciar secion -> btn_login
         self.btn_login.clicked.connect(self.login)
-        # nombre boton cerrar ventana -> btn_close
         self.btn_close.clicked.connect(self.cerrarVentana)
-        # nombre boton registro  -> btn_registro
 
         # pantallas
         self.view_usuario = SeccionUsuario()
@@ -78,9 +76,6 @@ w = MainWindow()
 w.show()
 app.exec()
 """
-# PAQUETE DE ESTILOS EN EL ARCHIVO QRC
-import src.views.ui.resource_rc
-import src.views.ui.resource
 
 
 if __name__ == '__main__':
