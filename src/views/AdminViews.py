@@ -1,17 +1,27 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox, QDialog
+import os
+from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox, QDialog, QWidget
 from PyQt5 import uic
 from PyQt5.QtCore import Qt, QPoint
+# para que funcione la importacion src.....
+from sys import path
+path.append("../../")
 # CLASES CREADAS PARA EL USO DE MVC
 from src.models.Persona import Persona
 from src.controlladores.userController import Account
+
+#INTERFACES
+from src.views.intefaz_admin import  SeccionAdministrador
+from src.views.interfaz_usuario import SeccionUsuario
+
 
 
 
 class Principal(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
-        self.logg = uic.loadUi("login.ui", self)
+        archivo = os.getcwd().split('src')[0] + r'\src\views\ui\login.ui'
+        self.logg = uic.loadUi(archivo, self)
         self.setWindowFlags(Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint)
 
         # botones
@@ -51,30 +61,20 @@ class Principal(QMainWindow):
         else:
             self.message.setText(logg.login()[1])
             print(logg.login()[1])
+"""  
+def main():
+        app = QApplication(sys.argv)
+        principal = Principal()
+        principal.show()
+        app.exec_()
+"""
 
 
+if __name__ == '__main__':
+    import sys
 
+    app = QApplication(sys.argv)
+    principal = Principal()
+    principal.show()
+    app.exec_()
 
-
-
-# ESTA SECCION ES LA PANTALLA PRINCIPAL DEL USUARIO
-class SeccionUsuario(QDialog):
-    def __init__(self):
-        QDialog.__init__(self)
-        uic.loadUi("usuario.ui", self)
-
-
-# ESTA SECCION ES LA PANTALLA PRINCIPAL DEL USUARIO ADMINISTRADOR
-class SeccionAdministrador(QDialog):
-    def __init__(self):
-        QDialog.__init__(self)
-        uic.loadUi("admin.ui", self)
-
-
-
-
-
-app = QApplication(sys.argv)
-principal = Principal()
-principal.show()
-app.exec_()

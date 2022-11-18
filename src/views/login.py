@@ -2,12 +2,13 @@ from PyQt6 import QtCore, QtGui, QtWidgets, uic
 from PyQt6.QtGui import QPixmap
 
 from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton, QLabel, QVBoxLayout, QWidget
-
+from sys import path
+path.append("../../")
 
 from src.models.Persona import Persona
 from src.controlladores.userController import Account
 
-from src.views.panel_de_usuario import AnotherWindow
+
 
 """ 
 class AnotherWindow(object):
@@ -83,9 +84,7 @@ class Ui_Form(object):
         print(isValid)
         print(logg.login()[1])
 
-        if isValid:
-            #self.w.show()
-            AnotherWindow()
+
 
 
 
