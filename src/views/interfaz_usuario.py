@@ -10,7 +10,7 @@ from PyQt5.QtCore import Qt, QPoint
 class SeccionUsuario(QDialog):
     def __init__(self):
         QDialog.__init__(self)
-        archivo = os.getcwd().split('src')[0] + r'\src\views\ui\usuario.ui'
+        archivo = os.getcwd().split('src')[0] + r'\src\views\ui\RegistroIngreso.ui'
         uic.loadUi(archivo, self)
 
 

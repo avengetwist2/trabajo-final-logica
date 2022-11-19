@@ -1,148 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>590</width>
-    <height>412</height>
+    <width>589</width>
+    <height>369</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Form</string>
   </property>
-  <property name="styleSheet">
-   <string notr="true">border-image: url(:/img/inicio_registro.png);</string>
-  </property>
-  <widget class="QWidget" name="centralwidget">
-   <widget class="QLineEdit" name="usuario">
-    <property name="geometry">
-     <rect>
-      <x>270</x>
-      <y>162</y>
-      <width>171</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);
-border-bottom-color: rgb(0, 170, 255);
-border-color: rgb(0, 170, 255);
-gridline-color: rgb(0, 170, 255);
-</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="placeholderText">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="password">
-    <property name="geometry">
-     <rect>
-      <x>270</x>
-      <y>210</y>
-      <width>171</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);
-border-bottom-color: rgb(0, 170, 255);
-border-color: rgb(0, 170, 255);
-gridline-color: rgb(0, 170, 255);
-</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btn_registrarse">
-    <property name="geometry">
-     <rect>
-      <x>200</x>
-      <y>290</y>
-      <width>171</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>10</y>
-      <width>591</width>
-      <height>371</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true"/>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btn_login">
-    <property name="geometry">
-     <rect>
-      <x>230</x>
-      <y>250</y>
-      <width>101</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>30</y>
-      <width>551</width>
-      <height>321</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:rgba(0, 0, 0, 100);
-border-radius:15px;</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <zorder>label</zorder>
-   <zorder>usuario</zorder>
-   <zorder>password</zorder>
-   <zorder>btn_registrarse</zorder>
-   <zorder>btn_login</zorder>
-   <zorder>label_2</zorder>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
+  <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>590</width>
-     <height>21</height>
+     <width>591</width>
+     <height>371</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/img/inicio_registro.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
-  <include location="../../../../../QT DESIGNER TRABAJOS/2.qrc"/>
   <include location="img_rc.qrc"/>
  </resources>
  <connections/>
