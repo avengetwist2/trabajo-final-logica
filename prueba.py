@@ -38,7 +38,7 @@ class Ui_MainWindow(object):
 
         #print(data)
 
-        return [letras, data, asientos_ocupados.getReservasBySalaAndHorario()]
+        return [letras, data, asientos_ocupados.getReservasBy_Sala_Horario_Pelicula(1)]
 
 
 
@@ -62,6 +62,8 @@ class Ui_MainWindow(object):
         self.tableWidget.setGeometry(QtCore.QRect(10, 130, 711, 191))
 
         self.tableWidget.setObjectName("tableWidget")
+
+
         self.tableWidget.setColumnCount(7)
         self.tableWidget.setRowCount(6)
 
@@ -72,6 +74,7 @@ class Ui_MainWindow(object):
         for fila, lista in enumerate(self.listaDatos):
                 for columna, elemento in enumerate(lista):
                     self.tableWidget.setItem(fila, columna, QtWidgets.QTableWidgetItem(elemento))
+                    self.tableWidget.item(fila, columna).setSizeHint(QSize(50,50))
                     for el in self.optencion_de_datos()[2]:
                         #print(el)
                         if(elemento == el[5]):

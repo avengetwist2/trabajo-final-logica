@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="imgfondo">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1000</width>
+     <height>600</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/img/img/imgmenu.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_reserva">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>187</y>
+     <width>341</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+    background:rgba(0,0,0,0);
+	border-radius: 25% 25%;
+}
+
+QPushButton:hover{
+    background:rgba(0,0,0,0.3);
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_cancelar">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>265</y>
+     <width>341</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+    background:rgba(0,0,0,0);
+	border-radius: 25% 25%;
+}
+
+QPushButton:hover{
+    background:rgba(0,0,0,0.3);
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_imprimir">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>345</y>
+     <width>341</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+    background:rgba(0,0,0,0);
+	border-radius: 25% 25%;
+}
+
+QPushButton:hover{
+    background:rgba(0,0,0,0.3);
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_mapa">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>423</y>
+     <width>341</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+    background:rgba(0,0,0,0);
+	border-radius: 25% 25%;
+}
+
+QPushButton:hover{
+    background:rgba(0,0,0,0.3);
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_close">
+   <property name="geometry">
+    <rect>
+     <x>929</x>
+     <y>33</y>
+     <width>31</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+    background:rgba(0,0,0,0);
+	border-radius: 25% 25%;
+}
+
+QPushButton:hover{
+    background:rgba(0,0,0,0.3);
+	border-radius: 25% 25%;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="message">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>490</y>
+     <width>251</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgba(255, 255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string>message</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="img_rc.qrc"/>
+ </resources>
+ <connections/>
+</ui>

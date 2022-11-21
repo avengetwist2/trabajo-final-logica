@@ -7,7 +7,7 @@ class ReservasController:
     def getReservasBy_Sala_Horario_Pelicula(self, id):
         try:
             conn = Conexion()
-            query = "SELECT personas.nombre, personas.correo, personas.telefono, reservas.* FROM reservas, personas WHERE personas.id = reservas.id_persona AND sala = {0} AND horario ='{1}' AND reservas.id_pelicula = {2} ".format(self.Obj_reserva.getSala(), self.Obj_reserva.getHorario(), id)
+            query = "SELECT personas.nombre, personas.correo, personas.telefono, reservas.* FROM reservas, personas WHERE personas.id = reservas.id_persona AND sala = {0} AND horario ={1} AND reservas.id_pelicula = {2} ".format(self.Obj_reserva.getSala(), self.Obj_reserva.getHorario(), id)
             usuario = conn.run_query(query)
             if usuario != None:
                 return usuario.fetchall()
@@ -16,10 +16,32 @@ class ReservasController:
             print('error en controlador de reserva',ex)
             return  ex
 
-    def crearReservas_Sala_Horario_Peliculas(self, id):
+    def crearReservas_Sala_Horario_Peliculas(self):
         try:
             conn = Conexion()
-            query = "INSERT INTO reservas (sala, asiento, horario, id_persona) VALUES({0}, '{1}', '{2}', {3}, {4})".format(self.Obj_reserva.getSala(), self.Obj_reserva.getAsiento(), self.Obj_reserva.getHorario(), self.Obj_reserva.getIdPersona(), id)
+            comprobacion = "SELECT * FROM reservas  WHERE sala = {0} AND asiento = '{1}' AND horario = {2} AND id_persona = {3} AND id_pelicula = {4} ".format(
+                self.Obj_reserva.getSala(), self.Obj_reserva.getAsiento(), self.Obj_reserva.getHorario(),
+                self.Obj_reserva.getIdPersona(), self.Obj_reserva.getPelicula())
+            comp = conn.run_query(comprobacion)
+
+            data = comp.fetchall()
+            print(len(data))
+
+            if len(data) == 0:
+                query = "INSERT INTO reservas (sala, asiento, horario, id_persona, id_pelicula) VALUES({0}, '{1}', '{2}', {3}, {4})".format(self.Obj_reserva.getSala(), self.Obj_reserva.getAsiento(), self.Obj_reserva.getHorario(), self.Obj_reserva.getIdPersona(), self.Obj_reserva.getPelicula())
+                reserva = conn.run_query(query)
+
+                return reserva
+
+        except Exception as ex:
+            print('error en controlador de reserva',ex)
+            return  ex
+
+    def borrarReservas_Sala_Horario_Peliculas(self):
+        try:
+            conn = Conexion()
+
+            query = "DELETE FROM reservas  WHERE sala = {0} AND asiento = '{1}' AND horario = {2} AND id_persona = {3} AND id_pelicula = {4} ".format(self.Obj_reserva.getSala(), self.Obj_reserva.getAsiento(), self.Obj_reserva.getHorario(), self.Obj_reserva.getIdPersona(), self.Obj_reserva.getPelicula())
             reserva = conn.run_query(query)
 
             return reserva
@@ -27,7 +49,6 @@ class ReservasController:
         except Exception as ex:
             print('error en controlador de reserva',ex)
             return  ex
-
 
 
 

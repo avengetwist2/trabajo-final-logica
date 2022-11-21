@@ -16,5 +16,6 @@ class Conexion:
                 conn.commit()
             return result
         except Exception as ex:
-            print('Error en archivo de conexion',ex)
+            #print('Error en archivo de conexion',ex)
+            print(ex)
 
