@@ -5,6 +5,7 @@ Para tener en ejecucion local debe tener instalado
 
 - PyQt5
 - sqlite3
+- Se debe arrastrar la carpeta trabajo-final-logica para poder ejecutarlo dentro de PyCharm
 
 # Estudiantes
 - Brayan Obilmer Vallejos Mueses
