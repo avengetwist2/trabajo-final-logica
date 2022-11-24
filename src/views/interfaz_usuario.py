@@ -10,6 +10,7 @@ from PyQt5.QtGui import QPixmap
 #INTERFACES
 from src.views.sillas_cine import  Sillas_Cine
 from src.views.reservar import Reservar
+from src.views.reservas_realizadas import Reservas_realizadas
 
 # ESTA SECCION ES LA PANTALLA PRINCIPAL DEL USUARIO
 class SeccionUsuario(QDialog):
@@ -28,11 +29,11 @@ class SeccionUsuario(QDialog):
         self.imgfondo.setPixmap(pixmap)
 
 
-        #botones
+        #botones  btn_reservas
         #boton de ver disponibilidades
-        self.btn_reserva.clicked.connect(self.reservar)
-        self.btn_cancelar.clicked.connect(self.acceder_disponibilidad)
-        self.btn_imprimir.clicked.connect(self.acceder_disponibilidad)
+        #self.btn_reserva.clicked.connect(self.reservar)
+        #self.btn_cancelar.clicked.connect(self.acceder_disponibilidad)
+        self.btn_reservas.clicked.connect(self.acceder_reservas_realizadas)
         self.btn_mapa.clicked.connect(self.acceder_disponibilidad)
         self.btn_close.clicked.connect(self.cerrar)
 
@@ -40,6 +41,7 @@ class SeccionUsuario(QDialog):
         # PANTALLAS
         self.view_sillas_disponibles = Sillas_Cine(data_transferida)
         self.view_reservar = Reservar()
+        self.view_reserva_realizadas = Reservas_realizadas(data_transferida)
 
 
     def acceder_disponibilidad(self):
@@ -51,11 +53,10 @@ class SeccionUsuario(QDialog):
         #self.showMinimized()
         self.view_sillas_disponibles.show()
 
-    def cancelarReserva(self):
-        pass
+    def acceder_reservas_realizadas(self):
+        self.view_reserva_realizadas.show()
 
-    def imprimirReserva(self):
-        pass
+
 
     def cerrar(self):
         exit()

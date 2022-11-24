@@ -29,7 +29,7 @@
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="btn_reserva">
+  <widget class="QPushButton" name="bbb">
    <property name="geometry">
     <rect>
      <x>330</x>
@@ -39,20 +39,13 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QPushButton{
-    background:rgba(0,0,0,0);
-	border-radius: 25% 25%;
-}
-
-QPushButton:hover{
-    background:rgba(0,0,0,0.3);
-}</string>
+    <string notr="true">background-color:rgb(13, 13, 13);</string>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="btn_cancelar">
+  <widget class="QPushButton" name="bbbcc">
    <property name="geometry">
     <rect>
      <x>330</x>
@@ -62,20 +55,13 @@ QPushButton:hover{
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QPushButton{
-    background:rgba(0,0,0,0);
-	border-radius: 25% 25%;
-}
-
-QPushButton:hover{
-    background:rgba(0,0,0,0.3);
-}</string>
+    <string notr="true">background-color:rgb(13, 13, 13);</string>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="btn_imprimir">
+  <widget class="QPushButton" name="nxnxn">
    <property name="geometry">
     <rect>
      <x>340</x>
@@ -85,14 +71,7 @@ QPushButton:hover{
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QPushButton{
-    background:rgba(0,0,0,0);
-	border-radius: 25% 25%;
-}
-
-QPushButton:hover{
-    background:rgba(0,0,0,0.3);
-}</string>
+    <string notr="true">background-color:rgb(13, 13, 13);</string>
    </property>
    <property name="text">
     <string/>
@@ -159,6 +138,19 @@ QPushButton:hover{
    </property>
    <property name="text">
     <string>message</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_reservas">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>220</y>
+     <width>251</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>RESERVAS REALIZADAS</string>
    </property>
   </widget>
  </widget>

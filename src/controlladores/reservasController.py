@@ -1,7 +1,7 @@
 from src.config.conexion import Conexion
 
 class ReservasController:
-    def __init__(self, Obj_reserva)-> None:
+    def __init__(self, Obj_reserva=None)-> None:
         self.Obj_reserva = Obj_reserva
 
     def getReservasBy_Sala_Horario_Pelicula(self, id):
@@ -50,6 +50,19 @@ class ReservasController:
             print('error en controlador de reserva',ex)
             return  ex
 
+    def getReservasByPersonaId(self, id):
+        try:
+            conn = Conexion()
+            tomar_reservas = "SELECT peliculas.nombre, peliculas.genero, reservas.asiento, salas_cine.nombre, horarios.nombre FROM reservas, peliculas, salas_cine, horarios WHERE horarios.id = reservas.horario AND salas_cine.id = reservas.sala AND peliculas.id = reservas.id_pelicula AND id_persona = {0}".format(id)
+            comp = conn.run_query(tomar_reservas)
+
+            data = comp.fetchall()
+
+            return data
+
+        except Exception as ex:
+            print('error en controlador de reserva',ex)
+            return  ex
 
 
 
@@ -80,6 +93,6 @@ class test:
 te = test()
 
 query = ReservasController(te)
-print(query.getReservasBy_Sala_Horario_Pelicula(1))
+print(query.getReservasByPersonaId(1))
 
 """

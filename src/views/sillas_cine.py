@@ -17,7 +17,7 @@ class Sillas_Cine(QDialog):
     def __init__(self, data_transferida=None):
         QDialog.__init__(self)
         self.data_transferida = data_transferida
-        print(data_transferida[1])
+        #print(data_transferida[1])
         archivo = os.getcwd().split('src')[0] + r'\src\views\ui\sillas_cine.ui'
         uic.loadUi(archivo, self)
         self.setWindowFlags(Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint)
