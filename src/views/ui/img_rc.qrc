@@ -1,5 +1,23 @@
 <RCC>
   <qresource prefix="img">
+    <file>img/background.png</file>
+    <file>img/CINEEEEE.png</file>
+    <file>img/imgagregar.png</file>
+    <file>img/imgcancelareserva.png</file>
+    <file>img/imgfactura (1).png</file>
+    <file>img/imgfactura.png</file>
+    <file>img/imgmenu.png</file>
+    <file>img/imgmodifi.png</file>
+    <file>img/imgregistro2.png</file>
+    <file>img/imgreserva.png</file>
+    <file>img/inicio_registro.png</file>
+    <file>img/main.png</file>
+    <file>img/paginicial.png</file>
+    <file>img/sillas_cine.png</file>
+    <file>img/background.png</file>
+    <file>img/inicio_registro.png</file>
+    <file>img/main.png</file>
+    <file>img/sillas_cine.png</file>
     <file>inicio_registro.png</file>
     <file>main.png</file>
   </qresource>
