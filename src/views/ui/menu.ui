@@ -23,55 +23,39 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/img/img/imgmenu.png);</string>
+    <string notr="true">border-image: url(:/img/img/menuimg.png);</string>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="bbb">
+  <widget class="QPushButton" name="btn_reservas">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>187</y>
+     <x>337</x>
+     <y>217</y>
      <width>341</width>
      <height>51</height>
     </rect>
    </property>
-   <property name="styleSheet">
-    <string notr="true">background-color:rgb(13, 13, 13);</string>
+   <property name="mouseTracking">
+    <bool>true</bool>
    </property>
-   <property name="text">
-    <string/>
+   <property name="tabletTracking">
+    <bool>false</bool>
    </property>
-  </widget>
-  <widget class="QPushButton" name="bbbcc">
-   <property name="geometry">
-    <rect>
-     <x>330</x>
-     <y>265</y>
-     <width>341</width>
-     <height>51</height>
-    </rect>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color:rgb(13, 13, 13);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="nxnxn">
-   <property name="geometry">
-    <rect>
-     <x>340</x>
-     <y>345</y>
-     <width>341</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color:rgb(13, 13, 13);</string>
+    <string notr="true">QPushButton{
+    background:rgba(0,0,0,0);
+	border-radius: 25% 25%;
+}
+
+QPushButton:hover{
+    background:rgba(0,0,0,0.3);
+}</string>
    </property>
    <property name="text">
     <string/>
@@ -80,8 +64,8 @@
   <widget class="QPushButton" name="btn_mapa">
    <property name="geometry">
     <rect>
-     <x>340</x>
-     <y>423</y>
+     <x>335</x>
+     <y>320</y>
      <width>341</width>
      <height>51</height>
     </rect>
@@ -117,7 +101,6 @@ QPushButton:hover{
 
 QPushButton:hover{
     background:rgba(0,0,0,0.3);
-	border-radius: 25% 25%;
 }</string>
    </property>
    <property name="text">
@@ -140,17 +123,34 @@ QPushButton:hover{
     <string>message</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="btn_reservas">
+  <widget class="QPushButton" name="btn_regresar">
    <property name="geometry">
     <rect>
-     <x>370</x>
-     <y>220</y>
-     <width>251</width>
-     <height>151</height>
+     <x>790</x>
+     <y>430</y>
+     <width>71</width>
+     <height>41</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+    background:rgba(0,0,0,0);
+	border-radius: 25% 25%;
+}
+
+QPushButton:hover{
+    background:rgba(0,0,0,0.3);
+}</string>
+   </property>
    <property name="text">
-    <string>RESERVAS REALIZADAS</string>
+    <string>Regresar</string>
    </property>
   </widget>
  </widget>
