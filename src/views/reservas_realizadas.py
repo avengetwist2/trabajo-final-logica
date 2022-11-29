@@ -31,15 +31,21 @@ class Reservas_realizadas(QDialog):
         self.setWindowFlags(Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint)
 
         # ajusta el ancho y largo de la pantalla
-        #self.setGeometry(QRect(50, 50, 1000, 600))
+        self.setGeometry(QRect(50, 50, 1000, 600))
         # carga la imagen de fondo
-        #pixmap = QPixmap(r'{0}\src\views\ui\img\imgregistro2.png'.format(os.getcwd().split("src")[0]))
-        #self.imgfondo.setPixmap(pixmap)
+        pixmap = QPixmap(r'{0}\src\views\ui\img\img_reserva.png'.format(os.getcwd().split("src")[0]))
+        self.imgfondo.setPixmap(pixmap)
 
         # BOTONES
         self.btn_actualizar.clicked.connect(self.actualizar)
+        self.btn_close.clicked.connect(self.cerrar)
+        self.btn_regresar.clicked.connect(self.regresar)
 
 
+    def regresar(self):
+        self.hide()
+    def cerrar(self):
+        exit()
 
     def actualizar(self):
 

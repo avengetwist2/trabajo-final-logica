@@ -13,25 +13,28 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QListWidget" name="list_reservas">
+  <widget class="QLabel" name="imgfondo">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>140</y>
-     <width>391</width>
-     <height>411</height>
+     <x>0</x>
+     <y>0</y>
+     <width>1000</width>
+     <height>600</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true"/>
+    <string notr="true">border-image: url(:/img/img/imgmenuadmin.png);</string>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="btn_cancelar">
+  <widget class="QPushButton" name="btn_modfilm">
    <property name="geometry">
     <rect>
-     <x>420</x>
-     <y>80</y>
-     <width>161</width>
+     <x>338</x>
+     <y>353</y>
+     <width>341</width>
      <height>51</height>
     </rect>
    </property>
@@ -49,76 +52,23 @@ QPushButton:hover{
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="btn_imprimir">
+  <widget class="QPushButton" name="btn_agregar">
    <property name="geometry">
     <rect>
-     <x>620</x>
-     <y>80</y>
-     <width>151</width>
-     <height>41</height>
+     <x>338</x>
+     <y>218</y>
+     <width>341</width>
+     <height>51</height>
     </rect>
    </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton{
-    background:rgba(0,0,0,0);
-	border-radius: 25% 25%;
-}
-
-QPushButton:hover{
-    background:rgba(0,0,0,0.3);
-}</string>
+   <property name="mouseTracking">
+    <bool>true</bool>
    </property>
-   <property name="text">
-    <string/>
+   <property name="tabletTracking">
+    <bool>false</bool>
    </property>
-  </widget>
-  <widget class="QPushButton" name="btn_actualizar">
-   <property name="geometry">
-    <rect>
-     <x>230</x>
-     <y>80</y>
-     <width>151</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton{
-    background:rgba(0,0,0,0);
-	border-radius: 25% 25%;
-}
-
-QPushButton:hover{
-    background:rgba(0,0,0,0.3);
-}</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="imgfondo">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1000</width>
-     <height>600</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/img/img/img_reserva.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btn_close">
-   <property name="geometry">
-    <rect>
-     <x>930</x>
-     <y>40</y>
-     <width>29</width>
-     <height>31</height>
-    </rect>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
@@ -137,8 +87,8 @@ QPushButton:hover{
   <widget class="QPushButton" name="btn_regresar">
    <property name="geometry">
     <rect>
-     <x>850</x>
-     <y>490</y>
+     <x>830</x>
+     <y>460</y>
      <width>71</width>
      <height>41</height>
     </rect>
@@ -164,13 +114,29 @@ QPushButton:hover{
     <string>Regresar</string>
    </property>
   </widget>
-  <zorder>imgfondo</zorder>
-  <zorder>list_reservas</zorder>
-  <zorder>btn_cancelar</zorder>
-  <zorder>btn_imprimir</zorder>
-  <zorder>btn_actualizar</zorder>
-  <zorder>btn_close</zorder>
-  <zorder>btn_regresar</zorder>
+  <widget class="QPushButton" name="btn_close">
+   <property name="geometry">
+    <rect>
+     <x>930</x>
+     <y>32</y>
+     <width>29</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+    background:rgba(0,0,0,0);
+	border-radius: 25% 25%;
+}
+
+QPushButton:hover{
+    background:rgba(0,0,0,0.3);
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
  </widget>
  <resources>
   <include location="img_rc.qrc"/>

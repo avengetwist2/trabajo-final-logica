@@ -43,8 +43,6 @@ class Principal(QMainWindow):
         self.btn_registro.clicked.connect(self.registrarse)
 
         # pantallas
-
-
         self.view_registro = Registro()
 
     def cerrarVentana(self):
@@ -78,7 +76,7 @@ class Principal(QMainWindow):
                     self.hide()
                 # si es usuario administrador
                 elif rol == 2:
-                    self.view_admin = SeccionAdministrador(data_transferir)
+                    self.view_admin = SeccionAdministrador()
                     self.view_admin.show()
                     self.hide()
             else:
