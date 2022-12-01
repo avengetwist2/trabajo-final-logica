@@ -25,7 +25,7 @@ class SeccionUsuario(QDialog):
         # ajusta el ancho y largo de la pantalla
         self.setGeometry(QRect(50, 50, 1000, 600))
         # carga la imagen de fondo
-        pixmap = QPixmap(r'{0}\src\views\ui\img\imgmenu.png'.format(os.getcwd().split("src")[0]))
+        pixmap = QPixmap(r'{0}\src\views\ui\img\menuimg.png'.format(os.getcwd().split("src")[0]))
         self.imgfondo.setPixmap(pixmap)
 
 

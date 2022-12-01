@@ -26,7 +26,7 @@
     <string notr="true"/>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="btn_cancelar">
    <property name="geometry">
     <rect>
      <x>420</x>
@@ -49,7 +49,7 @@ QPushButton:hover{
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="btn_imprimir">
    <property name="geometry">
     <rect>
      <x>620</x>
@@ -166,8 +166,8 @@ QPushButton:hover{
   </widget>
   <zorder>imgfondo</zorder>
   <zorder>list_reservas</zorder>
-  <zorder>pushButton</zorder>
-  <zorder>pushButton_2</zorder>
+  <zorder>btn_cancelar</zorder>
+  <zorder>btn_imprimir</zorder>
   <zorder>btn_actualizar</zorder>
   <zorder>btn_close</zorder>
   <zorder>btn_regresar</zorder>
