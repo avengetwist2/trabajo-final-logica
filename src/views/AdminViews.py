@@ -1,7 +1,7 @@
 import sys
 import os
 from sys import path
-path.append("../../")
+path.append("../")
 from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox, QDialog, QGraphicsPixmapItem
 from PyQt5 import uic, QtWidgets, QtGui
 from PyQt5.QtCore import Qt, QPoint, QRect, QSize, QPointF
