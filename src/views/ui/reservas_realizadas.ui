@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true"/>
+    <string notr="true">font: 12pt &quot;Times New Roman&quot;;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="btn_cancelar">
@@ -164,6 +164,23 @@ QPushButton:hover{
     <string>Regresar</string>
    </property>
   </widget>
+  <widget class="QLabel" name="message">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>520</y>
+     <width>221</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 20pt &quot;Times New Roman&quot;;
+color: rgb(255, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
   <zorder>imgfondo</zorder>
   <zorder>list_reservas</zorder>
   <zorder>btn_cancelar</zorder>
@@ -171,6 +188,7 @@ QPushButton:hover{
   <zorder>btn_actualizar</zorder>
   <zorder>btn_close</zorder>
   <zorder>btn_regresar</zorder>
+  <zorder>message</zorder>
  </widget>
  <resources>
   <include location="img_rc.qrc"/>

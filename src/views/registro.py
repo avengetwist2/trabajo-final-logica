@@ -18,13 +18,14 @@ class Registro(QDialog):
         archivo = os.getcwd().split('src')[0] + r'\src\views\ui\registarse.ui'
         uic.loadUi(archivo, self)
 
-        self.setWindowFlags(Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint)
+        #self.setWindowFlags(Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint)
 
         # ajusta el ancho y largo de la pantalla
         self.setGeometry(QRect(50, 50, 1000, 600))
         # carga la imagen de fondo
-        pixmap = QPixmap(r'{0}\src\views\ui\img\imgregistro2.png'.format(os.getcwd().split("src")[0]))
+        pixmap = QPixmap(r'{0}\src\views\ui\img\imgregistroo.png'.format(os.getcwd().split("src")[0]))
         self.imgfondo.setPixmap(pixmap)
+
 
         # BOTONES
         self.btn_close.clicked.connect(self.cerrarVentana)

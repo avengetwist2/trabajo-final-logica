@@ -20,13 +20,14 @@ class SeccionUsuario(QDialog):
         uic.loadUi(archivo, self)
 
 
-        self.setWindowFlags(Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint)
+        #self.setWindowFlags(Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint)
 
         # ajusta el ancho y largo de la pantalla
         self.setGeometry(QRect(50, 50, 1000, 600))
         # carga la imagen de fondo
         pixmap = QPixmap(r'{0}\src\views\ui\img\menuimg.png'.format(os.getcwd().split("src")[0]))
         self.imgfondo.setPixmap(pixmap)
+
 
 
         #botones  btn_reservas

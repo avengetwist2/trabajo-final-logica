@@ -39,11 +39,11 @@ class ReservasController:
             print('error en controlador de reserva',ex)
             return  ex
 
-    def borrarReservas_Sala_Horario_Peliculas(self):
+    def borrarReserva(self,id):
         try:
             conn = Conexion()
 
-            query = "DELETE FROM reservas  WHERE sala = {0} AND asiento = '{1}' AND horario = {2} AND id_persona = {3} AND id_pelicula = {4} ".format(self.Obj_reserva.getSala(), self.Obj_reserva.getAsiento(), self.Obj_reserva.getHorario(), self.Obj_reserva.getIdPersona(), self.Obj_reserva.getPelicula())
+            query = "DELETE FROM reservas  WHERE id = {0} ".format(id)
             reserva = conn.run_query(query)
 
             return reserva
@@ -55,7 +55,7 @@ class ReservasController:
     def getReservasByPersonaId(self, id):
         try:
             conn = Conexion()
-            tomar_reservas = "SELECT peliculas.nombre, peliculas.genero, reservas.asiento, salas_cine.nombre, horarios.nombre FROM reservas, peliculas, salas_cine, horarios WHERE horarios.id = reservas.horario AND salas_cine.id = reservas.sala AND peliculas.id = reservas.id_pelicula AND id_persona = {0}".format(id)
+            tomar_reservas = "SELECT peliculas.nombre, peliculas.genero, reservas.asiento, salas_cine.nombre, horarios.nombre, reservas.id FROM reservas, peliculas, salas_cine, horarios WHERE horarios.id = reservas.horario AND salas_cine.id = reservas.sala AND peliculas.id = reservas.id_pelicula AND id_persona = {0}".format(id)
             comp = conn.run_query(tomar_reservas)
 
             data = comp.fetchall()
@@ -65,6 +65,18 @@ class ReservasController:
         except Exception as ex:
             print('error en controlador de reserva',ex)
             return  ex
+
+    def getReservasColillasPago(self, id):
+        try:
+            conn = Conexion()
+            query = "SELECT personas.nombre as persona, personas.correo, personas.telefono, peliculas.*, reservas.asiento, salas_cine.nombre as sala, horarios.nombre as horario, reservas.precio FROM reservas, peliculas, salas_cine, horarios, personas WHERE reservas.id_persona = personas.id AND horarios.id = reservas.horario AND salas_cine.id = reservas.sala AND peliculas.id = reservas.id_pelicula AND reservas.id = {0}".format(id)
+            comp = conn.run_query(query)
+
+            data = comp.fetchall()
+
+            return data
+        except Exception:
+            print(Exception)
 
 
 

@@ -16,7 +16,7 @@ class SeccionAdministrador(QDialog):
         uic.loadUi(archivo, self)
         #imgmenuadmin
 
-        self.setWindowFlags(Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint)
+        #self.setWindowFlags(Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint)
 
         # ajusta el ancho y largo de la pantalla
         self.setGeometry(QRect(50, 50, 1000, 600))

@@ -26,7 +26,7 @@ class Principal(QMainWindow):
         QMainWindow.__init__(self)
         archivo = os.getcwd().split('src')[0] + r'\src\views\ui\ingresoRegistro.ui'
         self.logg = uic.loadUi(archivo, self)
-        self.setWindowFlags(Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint)
+        #self.setWindowFlags(Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint)
 
         # ajusta el ancho y largo de la pantalla
         self.setGeometry(QRect(50, 50, 1000, 600))

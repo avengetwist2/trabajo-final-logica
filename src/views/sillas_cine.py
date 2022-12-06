@@ -20,7 +20,7 @@ class Sillas_Cine(QDialog):
         #print(data_transferida[1])
         archivo = os.getcwd().split('src')[0] + r'\src\views\ui\sillas_cine.ui'
         uic.loadUi(archivo, self)
-        self.setWindowFlags(Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint)
+        #self.setWindowFlags(Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint)
 
 
         # ajusta el ancho y largo de la pantalla
