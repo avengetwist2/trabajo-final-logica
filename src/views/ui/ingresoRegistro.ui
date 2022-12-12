@@ -73,6 +73,12 @@
     <property name="styleSheet">
      <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
     </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhHiddenText|Qt::ImhNoAutoUppercase|Qt::ImhNoPredictiveText|Qt::ImhSensitiveData</set>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
     <property name="placeholderText">
      <string>Ingrese su contraseña</string>
     </property>
@@ -109,7 +115,7 @@
    <widget class="QPushButton" name="btn_login">
     <property name="geometry">
      <rect>
-      <x>390</x>
+      <x>410</x>
       <y>380</y>
       <width>181</width>
       <height>51</height>
@@ -132,7 +138,7 @@ QPushButton:hover{
    <widget class="QPushButton" name="btn_registro">
     <property name="geometry">
      <rect>
-      <x>360</x>
+      <x>370</x>
       <y>450</y>
       <width>261</width>
       <height>51</height>
